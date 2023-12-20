@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 10</title>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet"/>
+       <style>
+          body {
+            background:#FFE4E1;
+            color: #9370DB;
+            font-family: 'Fredericka the Great', serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+        flex-direction: column;
+    }
+          
+   .navbar li a:hover { 
+        background-color:rgb(246, 241, 241); 
+        height: 20px; 
+    } 
+         
+    .navbar {
+		position: relative;
+		z-index: 999;
+	}
+.navbar .dropdown{
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+	.navbar ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+    background: rgba(238, 238, 238, 0.6);
+	}
+
+	.navbar li {
+		display: inline-block;
+	}
+
+	.navbar li a {
+		color: rgb(78, 96, 210);
+		display: block;
+		padding: 20px;
+		text-decoration: none;
+	}
+
+	.navbar ul ul {
+		position: absolute;
+		top: 100%;
+		display: none;
+	}
+
+	.navbar ul ul li {
+		display: block;
+	}
+
+	.navbar li:hover ul {
+		display: block;
+	}
+	.navbar ul ul li a:hover {
+		background-color: rgb(246, 241, 241);
+	}
+  .submenu {
+  position: relative;
+}
+          h1 {
+            font-size: 8vh;
+            font-weight: 100;
+          }
+    
+          h3 {
+            font-size: 4vh;
+            color: #6A5ACD;
+            font-weight: 100;
+          }
+    
+          
+    header {
+    height: 60px;
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 2px;
+    justify-content: center;
+}
+footer{
+    margin-top: auto;
+    margin-right: 1500px;
+    color: #9370DB;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+    width:70%; 
+    height: 30%;
+    margin-left:15%; 
+    margin-right:15%;
+}
+thead{
+    background-color: white;
+}
+td{
+    text-align: center;
+}
+form{
+   margin-left: 10px;
+   font-size: 1,9rem;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left:auto
+}
+.col-sm-4{
+    position: relative;
+    min-height: 1px;
+    padding-right:15px;
+    padding-left:15px;
+    float: left;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left:4px solid transparent
+}
+.grid-item {
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.grid-item img {
+    padding-left: 10px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20%;
+}
+    </style>
+    </head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="lab10.html">Home</a>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="lab10.1.html">Shop<span class="caret"></span></a>
+                <ul>
+                      <li><a href="Cakes.html">Cakes</a></li>
+                      <li><a href="donuts.html">Donuts</a></li>
+                      <li><a href="macarones.html">Macarones</a></li>
+                      <li class="submenu"><a class="dropdown-toggle" data-toggle="dropdown" href="">Other<span class="caret"></span></a>
+                      <ul class="dropdown">
+                          <li><a href="utilities.html">Utilities</a></li>
+                          <li><a href="candles.html">Candles</a></li>
+                          <li><a href="balloons.html">Balloons</a></li>
+                      </ul>
+                      </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="tester.html">Payment information</a>
+                </li>
+                <li>
+                    <a href="registration.html">Login</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header><br><br><br>
+    <center><h1>The top products in Cake Shop</h1></center>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="grid-item">
+            <img src="cake2.jpg" alt=""></div>
+            <h3>Cake</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="grid-item">
+                <img src="ponch11.jpg" alt=""></div>
+            <h3>Donut</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="grid-item">
+                <img src="macarones4.jpg" alt=""></div>
+            <h3>Macarone</h3>        
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          </div>
+        </div>
+      </div><br>
+    <table>
+        <thead>
+        <tr>
+            <th>Energy-producing nutrients of products in our shop</th>
+            <th>Carbohydrates</th>
+            <th>Fat</th>
+            <th>Protein</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Cakes</td>
+            <td>21</td>
+            <td>17</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Donuts</td>
+            <td>32</td>
+            <td>36</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Macarones</td>
+            <td>14</td>
+            <td>24</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Cupcakes</td>
+            <td>19</td>
+            <td>12</td>
+            <td>8</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td style="background-color: white;">Sum of all nutrients</td>
+                <td colspan="3" style="text-align: center;">259</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br><form>
+    In our store:
+        <br><input type="checkbox" name="checkbox_button" value="drilling">Cakes
+        <br><input type="checkbox" name="checkbox_button" value="engineering">Donuts
+        <br><input type="checkbox" name="checkbox_button" value="field_consulting">Macarones
+        <br><input type="checkbox" name="checkbox_button" value="field_consulting">Cupcakes
+        <br><input type="checkbox" name="checkbox_button" value="field_consulting">Utilities
+        <br><input type="checkbox" name="checkbox_button" value="field_consulting">Candles
+        <br><input type="checkbox" name="checkbox_button" value="field_consulting">Balloons
+        <hr>
+        <label for="additional_comments">Any other comments:</label>
+        <br><textarea name="additional_comments"></textarea>
+        <br><input type="submit" value="Clear" style="background-color: white;">
+        <input type="submit" value="Submit" style="background-color: white;">
+    </form>
+          <footer><br>
+            <div class="flex">
+            <div class="column"><h4>Address: Dostyk 21st.</h4>
+            <h4>Contact:+7(707)9999090</h4>
+            <br><a href="https://maps.app.goo.gl/5WuSjNcZT2SD6NAb8" target="_blank" title="directions" target="_self">Directions</a>
+           
+            
+            </div>
+            
+        </div>
+        </footer> 
+       
+            </body>
+          </html>

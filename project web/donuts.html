@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab 10</title>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet"/>
+       <style>
+          body {
+            background:#FFE4E1;
+            color: #9370DB;
+            font-family: 'Fredericka the Great', serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+        flex-direction: column;
+    }
+          
+   .navbar li a:hover { 
+        background-color:rgb(246, 241, 241); 
+        height: 20px; 
+    } 
+         
+    .navbar {
+		position: relative;
+		z-index: 999;
+	}
+.navbar .dropdown{
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+	.navbar ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+    background: rgba(238, 238, 238, 0.6);
+	}
+
+	.navbar li {
+		display: inline-block;
+	}
+
+	.navbar li a {
+		color: rgb(78, 96, 210);
+		display: block;
+		padding: 20px;
+		text-decoration: none;
+	}
+
+	.navbar ul ul {
+		position: absolute;
+		top: 100%;
+		display: none;
+	}
+
+	.navbar ul ul li {
+		display: block;
+	}
+
+	.navbar li:hover ul {
+		display: block;
+	}
+	.navbar ul ul li a:hover {
+		background-color: rgb(246, 241, 241);
+	}
+  .submenu {
+  position: relative;
+}
+          h1 {
+            font-size: 8vh;
+            font-weight: 100;
+          }
+    
+          h3 {
+            font-size: 4vh;
+            color: #6A5ACD;
+            font-weight: 100;
+          }
+    
+          main {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+    header {
+    height: 60px;
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-item {
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.grid-item img {
+    padding-left: 10px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20%;
+}
+
+
+.flex-container {
+    flex: 1 0 32%;
+    flex-flow: row wrap;
+    padding-top: 55px;
+}
+
+.grid-container label {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 2px;
+    justify-content: center;
+}
+footer{
+    margin-top: auto;
+    margin-right: 150px;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left:4px solid transparent
+}
+    </style>
+    </head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="lab10.html">Home</a>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="lab10.1.html">Shop<span class="caret"></span></a>
+                <ul>
+                      <li><a href="Cakes.html">Cakes</a></li>
+                      <li><a href="donuts.html">Donuts</a></li>
+                      <li><a href="macarones.html">Macarones</a></li>
+                      <li class="submenu"><a class="dropdown-toggle" data-toggle="dropdown" href="">Other<span class="caret"></span></a>
+                      <ul class="dropdown">
+                          <li><a href="utilities.html">Utilities</a></li>
+                          <li><a href="candles.html">Candles</a></li>
+                          <li><a href="balloons.html">Balloons</a></li>
+                      </ul>
+                      </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="tester.html">Payment information</a>
+                </li>
+                <li>
+                    <a href="registration.html">Login</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <section>
+      <h2 class="cover-text-heading flex-container"></h2>
+      <div class="grid-container">
+          <div class="grid-item">
+              <img src="ponch2.jpg" alt="">
+              <br>
+              <label>Donut</label>
+              <select name="price" required>
+                  <option value="">Large - 7000 tg</option>
+                  <option value="">Medium - 5000 tg</option>
+                  <option value="">Small - 3000 tg</option>
+              </select>
+          </div>
+          <div class="grid-item">
+              <img src="ponch3.jpg" alt="">
+              <br>
+              <label>Donut</label>
+              <select name="price" required>
+                  <option value="">One - 1000 tg</option>
+                  <option value="">Two - 2000 tg</option>
+                  <option value="">More than two - 2500 tg</option>
+              </select>
+          </div>
+          <div class="grid-item">
+              <img src="ponch4.jpg" alt="">
+              <br>
+              <label>Donut</label>
+              <select name="price" required>
+                  <option value="">Large - 7000 tg</option>
+                  <option value="">Medium - 5000 tg</option>
+                  <option value="">Small - 3000 tg</option>
+              </select>
+          </div>
+          <div class="grid-item">
+              <img src="ponch5.jpg" alt="">
+              <br>
+              <label>Donut</label>
+              <select name="price" required>
+                  <option value="">Large - 7000 tg</option>
+                  <option value="">Medium - 5000 tg</option>
+                  <option value="">Small - 3000 tg</option>
+              </select>
+          </div>
+          <div class="grid-item">
+              <img src="ponch6.jpg" alt="">
+              <br>
+              <label>Donut</label>
+              <select name="price" required>
+                  <option value="">One - 1000 tg</option>
+                  <option value="">Two - 2000 tg</option>
+                  <option value="">More than two - 2500 tg</option>
+              </select>
+          </div>
+          <div class="grid-item">
+              <img src="ponch8.jpg" alt="">
+              <br>
+              <label>Donut</label>
+              <select name="price" required>
+                  <option value="">One - 1000 tg</option>
+                  <option value="">Two - 2000 tg</option>
+                  <option value="">More than two - 2500 tg</option>
+              </select>
+          </div>
+          <div class="grid-item">
+              <img src="ponch9.jpg" alt="">
+              <br>
+              <label>Donut</label>
+              <select name="price" required>
+                  <option value="">One - 1000 tg</option>
+                  <option value="">Two - 2000 tg</option>
+                  <option value="">More than two - 2500 tg</option>
+              </select>
+          </div>
+          <div class="grid-item">
+              <img src="ponch10.jpg" alt="">
+              <label>Donut</label>
+              <select name="price" required>
+                  <option value="">One - 1000 tg</option>
+                  <option value="">Two - 2000 tg</option>
+                  <option value="">More than two - 2500 tg</option>
+              </select>
+          </div>
+          <div class="grid-item">
+              <img src="ponch11.jpg" alt="">
+              <label>Donut</label>
+              <select name="price" required>
+                <option value="">One - 1000 tg</option>
+                  <option value="">Two - 2000 tg</option>
+                  <option value="">More than two - 2500 tg</option>
+                </select>
+          </div>
+          <div class="grid-item">
+              <img src="EAT__ Photo.jpg" alt="">
+              <label>Donut</label>
+              <select name="price" required>
+                <option value="">One - 1000 tg</option>
+                  <option value="">Two - 2000 tg</option>
+                  <option value="">More than two - 2500 tg</option>
+                </select>
+          </div>
+
+          <footer><br>
+            <div class="flex">
+            <div class="column"><h4>Address: Dostyk 21st.</h4>
+            <h4>Contact:+7(707)9999090</h4>
+            <br><a href="https://maps.app.goo.gl/5WuSjNcZT2SD6NAb8" target="_blank" title="directions" target="_self">Directions</a>
+           
+            
+            </div>
+            
+        </div>
+        </footer>
+        
+            </body>
+          </html>

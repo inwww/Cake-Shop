@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet">
+   <title>Login & Registration Form</title> 
+    <style>
+  body {
+            background:#FFE4E1;
+            color: #9370DB;
+            font-family: 'Fredericka the Great', serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+    }
+          
+   .navbar li a:hover { 
+        background-color:rgb(246, 241, 241); 
+        height: 60px; 
+    } 
+         
+    .navbar {
+		position: relative;
+		z-index: 999;
+	}
+.navbar .dropdown{
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+	.navbar ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+    background: rgba(238, 238, 238, 0.6);
+	}
+
+	.navbar li {
+		display: inline-block;
+	}
+
+	.navbar li a {
+		color: rgb(78, 96, 210);
+		display: block;
+		padding: 20px;
+		text-decoration: none;
+	}
+
+	.navbar ul ul {
+		position: absolute;
+		top: 100%;
+		display: none;
+	}
+
+	.navbar ul ul li {
+		display: block;
+	}
+
+	.navbar li:hover ul {
+		display: block;
+	}
+	.navbar ul ul li a:hover {
+		background-color: rgb(246, 241, 241);
+	}
+  .submenu {
+  position: relative;
+}
+          h1 {
+            font-size: 8vh;
+            font-weight: 100;
+          }
+    
+          h3 {
+            font-size: 4vh;
+            color: #6A5ACD;
+            font-weight: 100;
+          }
+    
+          
+    header {
+    height: 60px;
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left:4px solid transparent
+}
+
+
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms{
+    height: 600px;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #9370DB;
+    border-radius: 25px;
+}
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #9370DB;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #9370DB;
+}
+
+.input-field{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    margin-right: 10px;
+    accent-color: #9370DB;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text{
+    color: #9370DB;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #9370DB;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="lab10.html">Home</a>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="lab10.1.html">Shop<span class="caret"></span></a>
+                <ul>
+                      <li><a href="Cakes.html">Cakes</a></li>
+                      <li><a href="donuts.html">Donuts</a></li>
+                      <li><a href="macarones.html">Macarones</a></li>
+                      <li class="submenu"><a class="dropdown-toggle" data-toggle="dropdown" href="">Other<span class="caret"></span></a>
+                      <ul class="dropdown">
+                          <li><a href="utilities.html">Utilities</a></li>
+                          <li><a href="candles.html">Candles</a></li>
+                          <li><a href="balloons.html">Balloons</a></li>
+                      </ul>
+                      </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="tester.html">Payment information</a>
+                </li>
+                <li>
+                    <a href="registration.html" class="active" aria-label="Go to home page">Login</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password">
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Login" formaction="lab10.html">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Do you have an account?
+                        <a href="#" class="text signup-link">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form signup">
+                <span class="title">Registration</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Create a password">
+                    </div>
+                    <div class="input-field button">
+                        <input type="submit" value="Signup" formaction="lab10.html">
+                    </div>
+                    <div class="input-field button">
+                        <input type="submit" value="Cancel" class="text login-link">
+                    </div>
+                </form>
+               
+              
+            </div>
+        </div>
+    </div>
+    </footer> 
+     <script>
+        const container = document.querySelector(".container"),
+      pwShowHide = document.querySelectorAll(".showHidePw"),
+      pwFields = document.querySelectorAll(".password"),
+      signUp = document.querySelector(".signup-link"),
+      login = document.querySelector(".login-link");
+
+
+    signUp.addEventListener("click", ( )=>{
+        container.classList.add("active");
+    });
+    login.addEventListener("click", ( )=>{
+        container.classList.remove("active");
+    });
+     </script> 
+</body>
+</html>
